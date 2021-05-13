@@ -1,8 +1,8 @@
 #EJERCICIO 3
 class Empleado:
-    def __init__(self, nombre, sueldo):
-        self.nombre = input("Ingrese el nombre del empleado")
-        self.sueldo = int(input("Ingrese el sueldo del empleado"))
+    def __init__(self, nombre, sueldo=1000):
+        self.nombre = input("Ingrese el nombre del empleado ")
+        self.sueldo = int(input("Ingrese el sueldo del empleado "))
 
 
 empleadoDatos = Empleado("", 0)
