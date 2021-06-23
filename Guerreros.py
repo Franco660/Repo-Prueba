@@ -52,16 +52,18 @@ class Guerrero:
                 print("Golpea el guerrero AZUL")
                 guerAzul.golpear(guerAzul.precision, guerRojo.velocidad, guerAzul.fuerza, guerRojo.defensa, guerRojo)
                 Guerrero.reporteVida("")
-                print("Golpea el guerrero ROJO")
-                guerRojo.golpear(guerRojo.precision, guerAzul.velocidad, guerRojo.fuerza, guerAzul.defensa, guerAzul)
+                if guerRojo.vida > 0:
+                    print("Golpea el guerrero ROJO")
+                    guerRojo.golpear(guerRojo.precision, guerAzul.velocidad, guerRojo.fuerza, guerAzul.defensa, guerAzul)
         else:
             while guerAzul.vida > 0 and guerRojo.vida > 0:
                 Guerrero.reporteVida("")
                 print("Golpea el guerrero ROJO")
                 guerRojo.golpear(guerRojo.precision, guerAzul.velocidad, guerRojo.fuerza, guerAzul.defensa, guerAzul)
                 Guerrero.reporteVida("")
-                print("Golpea el guerrero AZUL")
-                guerAzul.golpear(guerAzul.precision, guerRojo.velocidad, guerAzul.fuerza, guerRojo.defensa, guerRojo)
+                if guerAzul.vida > 0:
+                    print("Golpea el guerrero AZUL")
+                    guerAzul.golpear(guerAzul.precision, guerRojo.velocidad, guerAzul.fuerza, guerRojo.defensa, guerRojo)
         if guerAzul.vida <= 0:
             print("Ha ganado el guerrero Rojo!")
         else:
